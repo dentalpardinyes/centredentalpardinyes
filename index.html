@@ -4,36 +4,37 @@
   <meta charset="UTF-8">
   <title>Centre Dental Pardinyes · Lleida</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Centre Dental Pardinyes · Clínica dental a Lleida. Ortodòncia, higiene dental, implants i estètica dental.">
+  <meta name="description" content="Centre Dental Pardinyes · Clínica dental a Lleida. Tracte proper, professionalitat i confiança.">
 
   <style>
     :root {
       --blau: #2f80ed;
-      --blau-fosc: #1c5fcc;
-      --terra-suau: #e8dcc4;
-      --terra-fosc: #c7b08a;
-      --fons: #f7f6f3;
-      --text: #333;
+      --blau-suau: #5fa3f0;
+      --terra: #d8c7a3;
+      --terra-suau: #f1e8d8;
+      --crema: #faf6ef;
+      --text: #3a3a3a;
       --blanc: #ffffff;
     }
 
     body {
       font-family: "Segoe UI", system-ui, sans-serif;
       margin: 0;
-      background: var(--fons);
+      background: var(--crema);
       color: var(--text);
+      line-height: 1.6;
     }
 
     /* HEADER */
     header {
       background: var(--blanc);
-      padding: 25px 20px;
+      padding: 30px 20px;
       text-align: center;
-      border-bottom: 4px solid var(--terra-suau);
+      border-bottom: 6px solid var(--terra);
     }
 
     header img {
-      max-width: 180px;
+      max-width: 160px;
       height: auto;
       margin-bottom: 10px;
     }
@@ -47,7 +48,7 @@
 
     header p {
       margin: 5px 0 0;
-      color: var(--terra-fosc);
+      color: var(--terra);
       font-size: 1rem;
     }
 
@@ -57,15 +58,16 @@
       padding: 12px 0;
       display: flex;
       justify-content: center;
-      gap: 25px;
+      gap: 30px;
       position: sticky;
       top: 0;
       z-index: 10;
+      border-bottom: 1px solid var(--terra);
     }
 
     nav a {
       text-decoration: none;
-      color: var(--blau-fosc);
+      color: var(--text);
       font-weight: 600;
       font-size: 1rem;
     }
@@ -77,51 +79,51 @@
     /* MAIN */
     main {
       max-width: 1000px;
-      margin: 30px auto;
+      margin: 40px auto;
       padding: 0 20px;
     }
 
     section {
       background: var(--blanc);
-      border-radius: 12px;
-      padding: 25px;
-      margin-bottom: 25px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      border-left: 6px solid var(--terra-suau);
+      border-radius: 14px;
+      padding: 30px;
+      margin-bottom: 35px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+      border-left: 8px solid var(--terra);
     }
 
     section h2 {
       margin-top: 0;
       color: var(--blau);
-      font-size: 1.6rem;
+      font-size: 1.8rem;
       font-weight: 700;
     }
 
     /* GRID */
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
     }
 
     .card {
-      background: var(--fons);
-      border-radius: 10px;
-      padding: 18px;
+      background: var(--crema);
+      border-radius: 12px;
+      padding: 20px;
       border: 1px solid var(--terra-suau);
     }
 
     .card h3 {
       margin-top: 0;
-      color: var(--blau-fosc);
-      font-size: 1.2rem;
+      color: var(--blau);
+      font-size: 1.3rem;
     }
 
     /* BUTTON */
     .btn {
       display: inline-block;
-      margin-top: 15px;
-      padding: 12px 22px;
+      margin-top: 20px;
+      padding: 12px 26px;
       border-radius: 999px;
       background: var(--blau);
       color: var(--blanc);
@@ -132,22 +134,22 @@
     }
 
     .btn:hover {
-      background: var(--blau-fosc);
+      background: var(--blau-suau);
     }
 
     /* FOOTER */
     footer {
       text-align: center;
       font-size: 0.9rem;
-      color: var(--terra-fosc);
-      padding: 25px 10px 40px;
+      color: var(--terra);
+      padding: 30px 10px 40px;
     }
 
     iframe {
       border: 0;
       width: 100%;
       height: 260px;
-      border-radius: 10px;
+      border-radius: 12px;
     }
   </style>
 </head>
@@ -157,10 +159,11 @@
 <header>
   <img src="logo.png" alt="Centre Dental Pardinyes">
   <h1>Centre Dental Pardinyes</h1>
-  <p>Clínica dental de Lleida · 4,6 ★</p>
+  <p>Clínica dental de Lleida</p>
 </header>
 
 <nav>
+  <a href="#sobre">Sobre nosaltres</a>
   <a href="#serveis">Serveis</a>
   <a href="#equip">Equip</a>
   <a href="#ubicacio">Ubicació</a>
@@ -169,13 +172,17 @@
 
 <main>
 
-  <section id="inici">
-    <h2>Benvinguts al Centre Dental Pardinyes</h2>
+  <section id="sobre">
+    <h2>Sobre nosaltres</h2>
     <p>
-      Som una clínica dental de referència a Lleida, amb més de 30 ressenyes i una valoració de 4,6 estrelles.
-      Oferim tractaments d’odontologia general, ortodòncia, implants i estètica dental.
+      Som una clínica dental de barri, nascuda amb la voluntat d’oferir un espai tranquil, proper i humà.
+      Creiem en un tracte sincer, en explicar les coses amb claredat i en cuidar cada pacient com si fos de casa.
+      No busquem grans paraules: només fer bé la nostra feina i que la gent se’n vagi amb confiança i tranquil·litat.
     </p>
-    <a class="btn" href="#contacte">Demana cita</a>
+    <p>
+      El nostre espai combina colors terra i crus perquè reflecteixen el que som: senzills, naturals i propers.
+      El blau és el toc que ens identifica i que aporta serenitat, però sempre sense dominar.
+    </p>
   </section>
 
   <section id="serveis">
@@ -183,7 +190,7 @@
     <div class="grid">
       <div class="card">
         <h3>Higiene dental</h3>
-        <p>Neteges professionals, tractament de genives i prevenció de càries.</p>
+        <p>Neteges professionals i tractaments de prevenció.</p>
       </div>
       <div class="card">
         <h3>Ortodòncia</h3>
@@ -191,11 +198,11 @@
       </div>
       <div class="card">
         <h3>Implants dentals</h3>
-        <p>Solucions fixes i segures per substituir peces dentals.</p>
+        <p>Solucions fixes i segures per recuperar peces dentals.</p>
       </div>
       <div class="card">
         <h3>Estètica dental</h3>
-        <p>Blanquejament, carilles i millora del somriure.</p>
+        <p>Blanquejament i carilles per millorar el somriure.</p>
       </div>
     </div>
   </section>
@@ -204,12 +211,12 @@
     <h2>El nostre equip</h2>
     <div class="grid">
       <div class="card">
-        <h3>Odontòlegs especialistes</h3>
-        <p>Professionals amb experiència en totes les àrees de l’odontologia.</p>
+        <h3>Odontòlegs</h3>
+        <p>Professionals amb experiència i formació contínua.</p>
       </div>
       <div class="card">
         <h3>Higienistes</h3>
-        <p>Equip d’higienistes amb formació avançada en prevenció.</p>
+        <p>Especialistes en prevenció i cura del pacient.</p>
       </div>
     </div>
   </section>
