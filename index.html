@@ -4,12 +4,14 @@
   <meta charset="UTF-8">
   <title>Centre Dental Pardinyes · Lleida</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Centre Dental Pardinyes · Clínica dental a Lleida. Tracte proper, professionalitat i confiança.">
+  <meta name="description" content="Centre Dental Pardinyes · Clínica dental a Lleida. Tracte proper, professional i tranquil.">
+
+  <!-- Tipografies elegants -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --blau: #2f80ed;
-      --blau-suau: #5fa3f0;
+      --blau-apagat: #4a6fa3;
       --terra: #d8c7a3;
       --terra-suau: #f1e8d8;
       --crema: #faf6ef;
@@ -18,47 +20,49 @@
     }
 
     body {
-      font-family: "Segoe UI", system-ui, sans-serif;
+      font-family: "Inter", sans-serif;
       margin: 0;
       background: var(--crema);
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     /* HEADER */
     header {
       background: var(--blanc);
-      padding: 30px 20px;
+      padding: 40px 20px;
       text-align: center;
       border-bottom: 6px solid var(--terra);
     }
 
     header img {
-      max-width: 160px;
+      max-width: 150px;
       height: auto;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
 
     header h1 {
       margin: 0;
-      font-size: 2rem;
-      color: var(--blau);
-      font-weight: 700;
+      font-family: "Lora", serif;
+      font-size: 2.4rem;
+      color: var(--blau-apagat);
+      letter-spacing: 1px;
     }
 
     header p {
-      margin: 5px 0 0;
+      margin: 8px 0 0;
       color: var(--terra);
-      font-size: 1rem;
+      font-size: 1.1rem;
+      font-weight: 500;
     }
 
     /* NAV */
     nav {
       background: var(--terra-suau);
-      padding: 12px 0;
+      padding: 14px 0;
       display: flex;
       justify-content: center;
-      gap: 30px;
+      gap: 35px;
       position: sticky;
       top: 0;
       z-index: 10;
@@ -70,71 +74,78 @@
       color: var(--text);
       font-weight: 600;
       font-size: 1rem;
+      letter-spacing: 0.5px;
     }
 
     nav a:hover {
-      color: var(--blau);
+      color: var(--blau-apagat);
     }
 
     /* MAIN */
     main {
-      max-width: 1000px;
-      margin: 40px auto;
+      max-width: 1050px;
+      margin: 50px auto;
       padding: 0 20px;
     }
 
     section {
       background: var(--blanc);
-      border-radius: 14px;
-      padding: 30px;
-      margin-bottom: 35px;
+      border-radius: 16px;
+      padding: 40px;
+      margin-bottom: 45px;
       box-shadow: 0 4px 14px rgba(0,0,0,0.06);
       border-left: 8px solid var(--terra);
     }
 
     section h2 {
       margin-top: 0;
-      color: var(--blau);
-      font-size: 1.8rem;
-      font-weight: 700;
+      font-family: "Lora", serif;
+      font-size: 1.9rem;
+      color: var(--blau-apagat);
+      letter-spacing: 1px;
+      text-transform: uppercase;
     }
 
     /* GRID */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 25px;
+      gap: 30px;
     }
 
     .card {
       background: var(--crema);
-      border-radius: 12px;
-      padding: 20px;
+      border-radius: 14px;
+      padding: 22px;
       border: 1px solid var(--terra-suau);
     }
 
     .card h3 {
       margin-top: 0;
-      color: var(--blau);
+      font-family: "Lora", serif;
       font-size: 1.3rem;
+      color: var(--blau-apagat);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
     }
 
     /* BUTTON */
     .btn {
       display: inline-block;
-      margin-top: 20px;
-      padding: 12px 26px;
+      margin-top: 25px;
+      padding: 14px 30px;
       border-radius: 999px;
-      background: var(--blau);
+      background: var(--blau-apagat);
       color: var(--blanc);
       text-decoration: none;
       font-weight: 600;
       font-size: 1rem;
       transition: 0.2s;
+      letter-spacing: 0.5px;
     }
 
     .btn:hover {
-      background: var(--blau-suau);
+      background: #3d5c87;
     }
 
     /* FOOTER */
@@ -142,14 +153,15 @@
       text-align: center;
       font-size: 0.9rem;
       color: var(--terra);
-      padding: 30px 10px 40px;
+      padding: 40px 10px 50px;
+      font-family: "Inter", sans-serif;
     }
 
     iframe {
       border: 0;
       width: 100%;
       height: 260px;
-      border-radius: 12px;
+      border-radius: 14px;
     }
   </style>
 </head>
@@ -158,7 +170,7 @@
 
 <header>
   <img src="logo.png" alt="Centre Dental Pardinyes">
-  <h1>Centre Dental Pardinyes</h1>
+  <h1>CENTRE DENTAL PARDINYES</h1>
   <p>Clínica dental de Lleida</p>
 </header>
 
@@ -173,56 +185,54 @@
 <main>
 
   <section id="sobre">
-    <h2>Sobre nosaltres</h2>
+    <h2>SOBRE NOSALTRES</h2>
     <p>
-      Som una clínica dental de barri, nascuda amb la voluntat d’oferir un espai tranquil, proper i humà.
-      Creiem en un tracte sincer, en explicar les coses amb claredat i en cuidar cada pacient com si fos de casa.
-      No busquem grans paraules: només fer bé la nostra feina i que la gent se’n vagi amb confiança i tranquil·litat.
+      Som una clínica dental que aposta per la proximitat, la calma i el tracte personal.
+      Creiem en una odontologia clara, sense presses i centrada en les persones.
     </p>
     <p>
-      El nostre espai combina colors terra i crus perquè reflecteixen el que som: senzills, naturals i propers.
-      El blau és el toc que ens identifica i que aporta serenitat, però sempre sense dominar.
+      El nostre objectiu és senzill: que cada pacient se senti escoltat, ben atès i en confiança.
     </p>
   </section>
 
   <section id="serveis">
-    <h2>Serveis</h2>
+    <h2>SERVEIS</h2>
     <div class="grid">
       <div class="card">
-        <h3>Higiene dental</h3>
+        <h3>HIGIENE DENTAL</h3>
         <p>Neteges professionals i tractaments de prevenció.</p>
       </div>
       <div class="card">
-        <h3>Ortodòncia</h3>
+        <h3>ORTODÒNCIA</h3>
         <p>Brackets i ortodòncia invisible.</p>
       </div>
       <div class="card">
-        <h3>Implants dentals</h3>
+        <h3>IMPLANTS</h3>
         <p>Solucions fixes i segures per recuperar peces dentals.</p>
       </div>
       <div class="card">
-        <h3>Estètica dental</h3>
+        <h3>ESTÈTICA</h3>
         <p>Blanquejament i carilles per millorar el somriure.</p>
       </div>
     </div>
   </section>
 
   <section id="equip">
-    <h2>El nostre equip</h2>
+    <h2>EQUIP</h2>
     <div class="grid">
       <div class="card">
-        <h3>Odontòlegs</h3>
+        <h3>ODONTÒLEGS</h3>
         <p>Professionals amb experiència i formació contínua.</p>
       </div>
       <div class="card">
-        <h3>Higienistes</h3>
+        <h3>HIGIENISTES</h3>
         <p>Especialistes en prevenció i cura del pacient.</p>
       </div>
     </div>
   </section>
 
   <section id="ubicacio">
-    <h2>On som</h2>
+    <h2>UBICACIÓ</h2>
     <p>Carrer del Corregidor Escofet, 18 · 25005 Lleida</p>
 
     <iframe
@@ -231,16 +241,16 @@
   </section>
 
   <section id="contacte">
-    <h2>Contacte i horaris</h2>
+    <h2>CONTACTE</h2>
     <p><strong>Telèfon:</strong> 973 22 56 54</p>
     <p><strong>Horari:</strong> Dilluns–Divendres, 9:00–13:30 i 16:00–20:00</p>
 
     <form>
       <p><strong>Formulari de contacte (exemple):</strong></p>
-      <p><input type="text" name="nom" placeholder="Nom i cognoms" style="width:100%;padding:10px;margin-bottom:10px;"></p>
-      <p><input type="email" name="email" placeholder="Correu electrònic" style="width:100%;padding:10px;margin-bottom:10px;"></p>
-      <p><input type="tel" name="telefon" placeholder="Telèfon" style="width:100%;padding:10px;margin-bottom:10px;"></p>
-      <p><textarea name="missatge" placeholder="Missatge" rows="4" style="width:100%;padding:10px;"></textarea></p>
+      <p><input type="text" name="nom" placeholder="Nom i cognoms" style="width:100%;padding:12px;margin-bottom:12px;border-radius:8px;border:1px solid var(--terra-suau);"></p>
+      <p><input type="email" name="email" placeholder="Correu electrònic" style="width:100%;padding:12px;margin-bottom:12px;border-radius:8px;border:1px solid var(--terra-suau);"></p>
+      <p><input type="tel" name="telefon" placeholder="Telèfon" style="width:100%;padding:12px;margin-bottom:12px;border-radius:8px;border:1px solid var(--terra-suau);"></p>
+      <p><textarea name="missatge" placeholder="Missatge" rows="4" style="width:100%;padding:12px;border-radius:8px;border:1px solid var(--terra-suau);"></textarea></p>
       <p><button type="submit" class="btn">Enviar (demo)</button></p>
     </form>
   </section>
