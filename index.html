@@ -5,21 +5,21 @@
   <title>Centre Dental Pardinyes · Lleida</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Tipografies elegants -->
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Tipografia moderna -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --blau-apagat: #4a607d;
-      --terra: #d2c2a3;
-      --crema: #f7f4ee;
-      --text: #2f2f2f;
-      --gris-suau: #e6e2db;
+      --blau-apagat: #3f5874;
+      --terra: #c9b08b;
+      --crema: #f5f1e8;
+      --text: #222222;
+      --gris-suau: #e1ddd4;
       --blanc: #ffffff;
     }
 
     body {
-      font-family: "Inter", sans-serif;
+      font-family: "Poppins", sans-serif;
       margin: 0;
       background: var(--crema);
       color: var(--text);
@@ -29,52 +29,60 @@
     /* HEADER */
     header {
       background: var(--blanc);
-      padding: 60px 20px;
-      text-align: center;
-      border-bottom: 4px solid var(--terra);
+      padding: 40px 20px 30px;
+      border-bottom: 3px solid var(--terra);
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 30px;
     }
 
     header img {
-      max-width: 130px;
-      margin-bottom: 25px;
+      max-width: 190px;
     }
 
-    header h1 {
+    .header-text h1 {
       margin: 0;
-      font-family: "Lora", serif;
-      font-size: 3rem;
-      color: var(--blau-apagat);
-      letter-spacing: 2px;
+      font-size: 2.6rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
+      color: var(--blau-apagat);
     }
 
-    header p {
-      margin-top: 12px;
-      color: var(--terra);
-      font-size: 1.15rem;
+    .header-text p {
+      margin-top: 8px;
+      font-size: 1rem;
       font-weight: 500;
-      letter-spacing: 0.5px;
+      color: var(--terra);
     }
 
     /* NAV */
     nav {
-      background: var(--gris-suau);
-      padding: 18px 0;
+      background: var(--blanc);
+      border-bottom: 1px solid var(--gris-suau);
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
       display: flex;
-      justify-content: center;
-      gap: 45px;
-      border-bottom: 1px solid var(--terra);
-      position: sticky;
-      top: 0;
-      z-index: 10;
+      justify-content: flex-end;
+      gap: 30px;
+      padding: 14px 0;
     }
 
     nav a {
       text-decoration: none;
       color: var(--text);
       font-weight: 600;
-      letter-spacing: 0.7px;
-      font-size: 1rem;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
     }
 
     nav a:hover {
@@ -84,74 +92,59 @@
     /* MAIN */
     main {
       max-width: 1100px;
-      margin: 70px auto;
+      margin: 50px auto 70px;
       padding: 0 20px;
     }
 
     section {
       background: var(--blanc);
-      padding: 60px;
-      margin-bottom: 70px;
+      padding: 40px 40px 45px;
+      margin-bottom: 40px;
       border-radius: 4px;
       border: 1px solid var(--gris-suau);
     }
 
     section h2 {
       margin-top: 0;
-      font-family: "Lora", serif;
-      font-size: 2.6rem;
-      color: var(--blau-apagat);
-      letter-spacing: 1.5px;
+      font-size: 1.6rem;
+      font-weight: 700;
       text-transform: uppercase;
-      margin-bottom: 35px;
+      letter-spacing: 0.14em;
+      color: var(--blau-apagat);
+      margin-bottom: 20px;
     }
 
-    /* SERVEIS I EQUIP — estil professional */
+    /* Llistes modernes */
     .llista {
       border-top: 1px solid var(--gris-suau);
-      padding-top: 30px;
+      margin-top: 20px;
     }
 
     .item {
-      padding: 25px 0;
+      padding: 18px 0;
       border-bottom: 1px solid var(--gris-suau);
     }
 
-    .item h3 {
-      margin: 0 0 8px 0;
-      font-family: "Lora", serif;
-      font-size: 1.5rem;
-      color: var(--blau-apagat);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    /* BUTTON */
-    .btn {
-      display: inline-block;
-      margin-top: 40px;
-      padding: 16px 36px;
-      border-radius: 4px;
-      background: var(--blau-apagat);
-      color: var(--blanc);
-      text-decoration: none;
-      font-weight: 600;
+    .item-title {
       font-size: 1rem;
-      letter-spacing: 0.5px;
-      transition: 0.2s;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--blau-apagat);
+      margin-bottom: 6px;
     }
 
-    .btn:hover {
-      background: #3c4f66;
+    .item p {
+      margin: 0;
+      font-size: 0.95rem;
     }
 
     /* FOOTER */
     footer {
       text-align: center;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       color: var(--terra);
-      padding: 50px 10px 70px;
-      font-family: "Inter", sans-serif;
+      padding: 30px 10px 40px;
     }
 
     iframe {
@@ -166,17 +159,23 @@
 <body>
 
 <header>
-  <img src="logo.png" alt="Centre Dental Pardinyes">
-  <h1>CENTRE DENTAL PARDINYES</h1>
-  <p>Clínica dental de Lleida</p>
+  <div class="header-inner">
+    <img src="logo.png" alt="Centre Dental Pardinyes">
+    <div class="header-text">
+      <h1>CENTRE DENTAL PARDINYES</h1>
+      <p>Clínica dental de Lleida</p>
+    </div>
+  </div>
 </header>
 
 <nav>
-  <a href="#sobre">Sobre nosaltres</a>
-  <a href="#serveis">Serveis</a>
-  <a href="#equip">Equip</a>
-  <a href="#ubicacio">Ubicació</a>
-  <a href="#contacte">Contacte</a>
+  <div class="nav-inner">
+    <a href="#sobre">Sobre nosaltres</a>
+    <a href="#serveis">Serveis</a>
+    <a href="#equip">Equip</a>
+    <a href="#ubicacio">Ubicació</a>
+    <a href="#contacte">Contacte</a>
+  </div>
 </nav>
 
 <main>
@@ -196,19 +195,19 @@
     <h2>SERVEIS</h2>
     <div class="llista">
       <div class="item">
-        <h3>HIGIENE DENTAL</h3>
+        <div class="item-title">HIGIENE DENTAL</div>
         <p>Neteges professionals i tractaments de prevenció.</p>
       </div>
       <div class="item">
-        <h3>ORTODÒNCIA</h3>
+        <div class="item-title">ORTODÒNCIA</div>
         <p>Brackets i ortodòncia invisible.</p>
       </div>
       <div class="item">
-        <h3>IMPLANTS</h3>
+        <div class="item-title">IMPLANTS</div>
         <p>Solucions fixes i segures per recuperar peces dentals.</p>
       </div>
       <div class="item">
-        <h3>ESTÈTICA</h3>
+        <div class="item-title">ESTÈTICA</div>
         <p>Blanquejament i carilles per millorar el somriure.</p>
       </div>
     </div>
@@ -218,11 +217,11 @@
     <h2>EQUIP</h2>
     <div class="llista">
       <div class="item">
-        <h3>ODONTÒLEGS</h3>
+        <div class="item-title">ODONTÒLEGS</div>
         <p>Professionals amb experiència i formació contínua.</p>
       </div>
       <div class="item">
-        <h3>HIGIENISTES</h3>
+        <div class="item-title">HIGIENISTES</div>
         <p>Especialistes en prevenció i cura del pacient.</p>
       </div>
     </div>
@@ -241,15 +240,6 @@
     <h2>CONTACTE</h2>
     <p><strong>Telèfon:</strong> 973 22 56 54</p>
     <p><strong>Horari:</strong> Dilluns–Divendres, 9:00–13:30 i 16:00–20:00</p>
-
-    <form>
-      <p><strong>Formulari de contacte (exemple):</strong></p>
-      <p><input type="text" name="nom" placeholder="Nom i cognoms" style="width:100%;padding:14px;margin-bottom:14px;border-radius:4px;border:1px solid var(--gris-suau);"></p>
-      <p><input type="email" name="email" placeholder="Correu electrònic" style="width:100%;padding:14px;margin-bottom:14px;border-radius:4px;border:1px solid var(--gris-suau);"></p>
-      <p><input type="tel" name="telefon" placeholder="Telèfon" style="width:100%;padding:14px;margin-bottom:14px;border-radius:4px;border:1px solid var(--gris-suau);"></p>
-      <p><textarea name="missatge" placeholder="Missatge" rows="4" style="width:100%;padding:14px;border-radius:4px;border:1px solid var(--gris-suau);"></textarea></p>
-      <p><button type="submit" class="btn">Enviar (demo)</button></p>
-    </form>
   </section>
 
 </main>
