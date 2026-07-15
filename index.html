@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <title>Centre Dental Pardinyes · Lleida</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Centre Dental Pardinyes · Clínica dental a Lleida. Ortodòncia, higiene dental, implants i estètica dental.">
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      margin: 0;
+      background: #f5f7fb;
+      color: #222;
+    }
+    header {
+      background: white;
+      padding: 30px 20px;
+      text-align: center;
+      border-bottom: 1px solid #e0e4ef;
+    }
+    header img {
+      max-width: 220px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      color: #2f80ed;
+    }
+    nav {
+      background: #ffffff;
+      border-bottom: 1px solid #e0e4ef;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav a {
+      text-decoration: none;
+      color: #2f80ed;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 0 15px;
+    }
+    section {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    }
+    section h2 {
+      margin-top: 0;
+      color: #2f80ed;
+      font-size: 1.4rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+    }
+    .card {
+      border-radius: 8px;
+      border: 1px solid #e0e4ef;
+      padding: 15px;
+      background: #fafbff;
+    }
+    .card h3 {
+      margin-top: 0;
+      font-size: 1.1rem;
+      color: #2f80ed;
+    }
+    .contact-info p {
+      margin: 5px 0;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: #2f80ed;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .btn:hover {
+      background: #1c5fcc;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #666;
+      padding: 20px 10px 30px;
+    }
+    iframe {
+      border: 0;
+      width: 100%;
+      height: 250px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="logo.png" alt="Centre Dental Pardinyes">
+  <h1>Centre Dental Pardinyes</h1>
+  <p>Clínica dental de Lleida · 4,6 ★</p>
+</header>
+
+<nav>
+  <a href="#serveis">Serveis</a>
+  <a href="#equip">Equip</a>
+  <a href="#ubicacio">Ubicació</a>
+  <a href="#contacte">Contacte</a>
+</nav>
+
+<main>
+  <section id="inici">
+    <h2>Benvinguts al Centre Dental Pardinyes</h2>
+    <p>
+      Som una clínica dental de referència a Lleida, amb més de 30 ressenyes i una valoració de 4,6 estrelles.
+      Oferim tractaments d’odontologia general, ortodòncia, implants i estètica dental.
+    </p>
+    <a class="btn" href="#contacte">Demana cita</a>
+  </section>
+
+  <section id="serveis">
+    <h2>Serveis</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Higiene dental</h3>
+        <p>Neteges professionals, tractament de genives i prevenció de càries.</p>
+      </div>
+      <div class="card">
+        <h3>Ortodòncia</h3>
+        <p>Brackets i ortodòncia invisible.</p>
+      </div>
+      <div class="card">
+        <h3>Implants dentals</h3>
+        <p>Solucions fixes i segures per substituir peces dentals.</p>
+      </div>
+      <div class="card">
+        <h3>Estètica dental</h3>
+        <p>Blanquejament, carilles i millora del somriure.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="equip">
+    <h2>El nostre equip</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Odontòlegs especialistes</h3>
+        <p>Professionals amb experiència en totes les àrees de l’odontologia.</p>
+      </div>
+      <div class="card">
+        <h3>Higienistes</h3>
+        <p>Equip d’higienistes amb formació avançada en prevenció.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="ubicacio">
+    <h2>On som</h2>
+    <p>Carrer del Corregidor Escofet, 18 · 25005 Lleida</p>
+
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.019702829969!2d0.622!3d41.617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zTExFSURB!5e0!3m2!1sca!2es!4v0000000000">
+    </iframe>
+  </section>
+
+  <section id="contacte">
+    <h2>Contacte i horaris</h2>
+    <div class="contact-info">
+      <p><strong>Telèfon:</strong> 973 22 56 54</p>
+      <p><strong>Horari:</strong> Dilluns–Divendres, 9:00–13:30 i 16:00–20:00</p>
+    </div>
+
+    <form>
+      <p><strong>Formulari de contacte (exemple):</strong></p>
+      <p><input type="text" name="nom" placeholder="Nom i cognoms" style="width:100%;padding:8px;margin-bottom:8px;"></p>
+      <p><input type="email" name="email" placeholder="Correu electrònic" style="width:100%;padding:8px;margin-bottom:8px;"></p>
+      <p><input type="tel" name="telefon" placeholder="Telèfon" style="width:100%;padding:8px;margin-bottom:8px;"></p>
+      <p><textarea name="missatge" placeholder="Missatge" rows="4" style="width:100%;padding:8px;"></textarea></p>
+      <p><button type="submit" class="btn">Enviar (demo)</button></p>
+    </form>
+  </section>
+</main>
+
+<footer>
+  &copy; <span id="any"></span> Centre Dental Pardinyes · Lleida
+</footer>
+
+<script>
+  document.getElementById('any').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
