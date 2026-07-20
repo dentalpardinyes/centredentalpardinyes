@@ -51,6 +51,12 @@
       z-index: 2;
     }
 
+    .hero img {
+      width: 90px;
+      opacity: 0.9;
+      margin-bottom: 15px;
+    }
+
     .hero h1 {
       font-size: 2.8rem;
       font-weight: 700;
@@ -141,18 +147,21 @@
     .sobre img {
       width: 100%;
       border-radius: 4px;
+      opacity: 0.9;
     }
 
-    /* GALERIA */
-    .galeria {
+    /* SERVEIS */
+    .serveis-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      margin-top: 30px;
     }
 
-    .galeria img {
+    .serveis-grid img {
       width: 100%;
       border-radius: 4px;
+      opacity: 0.9;
       border: 1px solid var(--gris-suau);
     }
 
@@ -178,6 +187,7 @@
 <!-- HERO -->
 <div class="hero">
   <div class="hero-content">
+    <img src="queixalets.jpeg" alt="Detall dental">
     <h1>CENTRE DENTAL PARDINYES</h1>
     <p>Clínica dental a Lleida</p>
     <a href="#contacte">Demana cita</a>
@@ -189,7 +199,6 @@
   <div class="nav-inner">
     <a href="#sobre">Sobre nosaltres</a>
     <a href="#serveis">Serveis</a>
-    <a href="#galeria">La clínica</a>
     <a href="#ubicacio">Ubicació</a>
     <a href="#contacte">Contacte</a>
   </div>
@@ -217,22 +226,17 @@
   <!-- SERVEIS -->
   <section id="serveis">
     <h2>SERVEIS</h2>
+
     <ul>
       <li><strong>Higiene dental:</strong> neteges professionals i prevenció.</li>
       <li><strong>Ortodòncia:</strong> brackets i ortodòncia invisible.</li>
       <li><strong>Implants:</strong> solucions fixes per recuperar peces dentals.</li>
       <li><strong>Estètica:</strong> blanquejament i carilles.</li>
     </ul>
-  </section>
 
-  <!-- GALERIA -->
-  <section id="galeria">
-    <h2>LA CLÍNICA</h2>
-    <div class="galeria">
-      <img src="queixalets.jpeg" alt="Quadres dents blaves">
-      <img src="sala_despera_2.jpeg" alt="Sala d'espera 2">
+    <div class="serveis-grid">
+      <img src="sala_despera_1.jpeg" alt="Sala d'espera">
       <img src="consulta_2.jpeg" alt="Consulta dental">
-      <img src="cuadre_queixal_sencer.jpeg" alt="Quadre dent abstracta">
     </div>
   </section>
 
