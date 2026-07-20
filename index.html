@@ -16,6 +16,7 @@
       --text: #222222;
       --gris-suau: #e1ddd4;
       --blanc: #ffffff;
+      --whatsapp: #25D366;
     }
 
     body {
@@ -145,19 +146,41 @@
     }
 
     /* SERVEIS */
-    .serveis-images {
-      display: flex;
-      gap: 30px;
+    .serveis-img {
       margin-top: 30px;
+      width: 100%;
+      height: 260px;
+      background: url('sala_despera_1.jpeg') center/cover no-repeat;
+      border-radius: 4px;
+      opacity: 0.85;
+      border: 1px solid var(--gris-suau);
     }
 
-    .serveis-images img {
-      width: 50%;
-      border-radius: 4px;
-      opacity: 0.9;
-      border: 1px solid var(--gris-suau);
-      object-fit: cover;
-      height: 260px;
+    /* CONTACTE */
+    .horari p {
+      margin: 6px 0;
+    }
+
+    /* WHATSAPP BUTTON */
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 22px;
+      right: 22px;
+      background: var(--whatsapp);
+      color: var(--blanc);
+      padding: 14px 18px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .whatsapp-btn img {
+      width: 22px;
+      height: 22px;
     }
 
     /* FOOTER */
@@ -228,10 +251,7 @@
       <li><strong>Estètica:</strong> blanquejament i carilles.</li>
     </ul>
 
-    <div class="serveis-images">
-      <img src="sala_despera_1.jpeg" alt="Sala d'espera">
-      <img src="consulta_2.jpeg" alt="Consulta dental">
-    </div>
+    <div class="serveis-img"></div>
   </section>
 
   <!-- UBICACIÓ -->
@@ -247,8 +267,18 @@
   <!-- CONTACTE -->
   <section id="contacte">
     <h2>CONTACTE</h2>
+
+    <div class="horari">
+      <p><strong>Dilluns:</strong> 10:00–13:30, 16:00–19:30</p>
+      <p><strong>Dimarts:</strong> 10:00–13:30, 16:00–19:30</p>
+      <p><strong>Dimecres:</strong> 10:00–13:30, 16:00–19:30</p>
+      <p><strong>Dijous:</strong> 10:00–14:00</p>
+      <p><strong>Divendres:</strong> 10:00–14:00</p>
+      <p><strong>Dissabte:</strong> Tancat</p>
+      <p><strong>Diumenge:</strong> Tancat</p>
+    </div>
+
     <p><strong>Telèfon:</strong> 973 22 56 54</p>
-    <p><strong>Horari:</strong> Dilluns–Divendres, 9:00–13:30 i 16:00–20:00</p>
   </section>
 
 </main>
@@ -260,6 +290,11 @@
 <script>
   document.getElementById('any').textContent = new Date().getFullYear();
 </script>
+
+<!-- WHATSAPP BUTTON -->
+<a class="whatsapp-btn" href="https://wa.me/34638457353" target="_blank">
+  📞 WhatsApp
+</a>
 
 </body>
 </html>
