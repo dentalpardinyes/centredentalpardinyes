@@ -26,39 +26,55 @@
       line-height: 1.7;
     }
 
-    /* HEADER */
-    header {
-      background: var(--blanc);
-      padding: 40px 20px 30px;
-      border-bottom: 3px solid var(--terra);
-    }
-
-    .header-inner {
-      max-width: 1100px;
-      margin: 0 auto;
+    /* HERO */
+    .hero {
+      width: 100%;
+      height: 420px;
+      background: url('sala_despera_1.jpeg') center/cover no-repeat;
       display: flex;
       align-items: center;
-      gap: 30px;
+      justify-content: center;
+      text-align: center;
+      color: var(--blanc);
+      position: relative;
     }
 
-    header img {
-      max-width: 190px;
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
     }
 
-    .header-text h1 {
-      margin: 0;
-      font-size: 2.6rem;
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
       font-weight: 700;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: var(--blau-apagat);
+      margin: 0;
     }
 
-    .header-text p {
-      margin-top: 8px;
-      font-size: 1rem;
+    .hero p {
+      margin-top: 10px;
+      font-size: 1.2rem;
       font-weight: 500;
-      color: var(--terra);
+    }
+
+    .hero a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 28px;
+      background: var(--terra);
+      color: var(--blanc);
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 4px;
+      letter-spacing: 0.05em;
     }
 
     /* NAV */
@@ -114,29 +130,30 @@
       margin-bottom: 20px;
     }
 
-    /* Llistes modernes */
-    .llista {
-      border-top: 1px solid var(--gris-suau);
-      margin-top: 20px;
+    /* SOBRE NOSALTRES */
+    .sobre {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: center;
     }
 
-    .item {
-      padding: 18px 0;
-      border-bottom: 1px solid var(--gris-suau);
+    .sobre img {
+      width: 100%;
+      border-radius: 4px;
     }
 
-    .item-title {
-      font-size: 1rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--blau-apagat);
-      margin-bottom: 6px;
+    /* GALERIA */
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
     }
 
-    .item p {
-      margin: 0;
-      font-size: 0.95rem;
+    .galeria img {
+      width: 100%;
+      border-radius: 4px;
+      border: 1px solid var(--gris-suau);
     }
 
     /* FOOTER */
@@ -158,21 +175,21 @@
 
 <body>
 
-<header>
-  <div class="header-inner">
-    <img src="logo.png" alt="Centre Dental Pardinyes">
-    <div class="header-text">
-      <h1>CENTRE DENTAL PARDINYES</h1>
-      <p>Clínica dental de Lleida</p>
-    </div>
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-content">
+    <h1>CENTRE DENTAL PARDINYES</h1>
+    <p>Clínica dental a Lleida</p>
+    <a href="#contacte">Demana cita</a>
   </div>
-</header>
+</div>
 
+<!-- NAV -->
 <nav>
   <div class="nav-inner">
     <a href="#sobre">Sobre nosaltres</a>
     <a href="#serveis">Serveis</a>
-    <a href="#equip">Equip</a>
+    <a href="#galeria">La clínica</a>
     <a href="#ubicacio">Ubicació</a>
     <a href="#contacte">Contacte</a>
   </div>
@@ -180,53 +197,46 @@
 
 <main>
 
+  <!-- SOBRE NOSALTRES -->
   <section id="sobre">
     <h2>SOBRE NOSALTRES</h2>
-    <p>
-      Som una clínica dental que aposta per la proximitat, la calma i el tracte personal.
-      Creiem en una odontologia clara, sense presses i centrada en les persones.
-    </p>
-    <p>
-      El nostre objectiu és senzill: que cada pacient se senti escoltat, ben atès i en confiança.
-    </p>
+    <div class="sobre">
+      <div>
+        <p>
+          Som una clínica dental que aposta per la proximitat, la calma i el tracte personal.
+          Creiem en una odontologia clara, sense presses i centrada en les persones.
+        </p>
+        <p>
+          El nostre objectiu és senzill: que cada pacient se senti escoltat, ben atès i en confiança.
+        </p>
+      </div>
+      <img src="cuadre_queixal_sencer.jpeg" alt="Quadre dent abstracta">
+    </div>
   </section>
 
+  <!-- SERVEIS -->
   <section id="serveis">
     <h2>SERVEIS</h2>
-    <div class="llista">
-      <div class="item">
-        <div class="item-title">HIGIENE DENTAL</div>
-        <p>Neteges professionals i tractaments de prevenció.</p>
-      </div>
-      <div class="item">
-        <div class="item-title">ORTODÒNCIA</div>
-        <p>Brackets i ortodòncia invisible.</p>
-      </div>
-      <div class="item">
-        <div class="item-title">IMPLANTS</div>
-        <p>Solucions fixes i segures per recuperar peces dentals.</p>
-      </div>
-      <div class="item">
-        <div class="item-title">ESTÈTICA</div>
-        <p>Blanquejament i carilles per millorar el somriure.</p>
-      </div>
+    <ul>
+      <li><strong>Higiene dental:</strong> neteges professionals i prevenció.</li>
+      <li><strong>Ortodòncia:</strong> brackets i ortodòncia invisible.</li>
+      <li><strong>Implants:</strong> solucions fixes per recuperar peces dentals.</li>
+      <li><strong>Estètica:</strong> blanquejament i carilles.</li>
+    </ul>
+  </section>
+
+  <!-- GALERIA -->
+  <section id="galeria">
+    <h2>LA CLÍNICA</h2>
+    <div class="galeria">
+      <img src="queixalets.jpeg" alt="Quadres dents blaves">
+      <img src="sala_despera_2.jpeg" alt="Sala d'espera 2">
+      <img src="consulta_2.jpeg" alt="Consulta dental">
+      <img src="cuadre_queixal_sencer.jpeg" alt="Quadre dent abstracta">
     </div>
   </section>
 
-  <section id="equip">
-    <h2>EQUIP</h2>
-    <div class="llista">
-      <div class="item">
-        <div class="item-title">ODONTÒLEGS</div>
-        <p>Professionals amb experiència i formació contínua.</p>
-      </div>
-      <div class="item">
-        <div class="item-title">HIGIENISTES</div>
-        <p>Especialistes en prevenció i cura del pacient.</p>
-      </div>
-    </div>
-  </section>
-
+  <!-- UBICACIÓ -->
   <section id="ubicacio">
     <h2>UBICACIÓ</h2>
     <p>Carrer del Corregidor Escofet, 18 · 25005 Lleida</p>
@@ -236,6 +246,7 @@
     </iframe>
   </section>
 
+  <!-- CONTACTE -->
   <section id="contacte">
     <h2>CONTACTE</h2>
     <p><strong>Telèfon:</strong> 973 22 56 54</p>
