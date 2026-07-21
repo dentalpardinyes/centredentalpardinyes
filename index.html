@@ -27,11 +27,45 @@
       line-height: 1.6;
     }
 
-    /* LOGO */
+    /* NAV + LOGO */
+    nav {
+      background: var(--blanc);
+      border-bottom: 1px solid var(--gris-suau);
+      padding: 10px 0;
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
     .logo {
-      width: 120px;
-      margin: 20px auto 0;
-      display: block;
+      width: 55px;
+      height: auto;
+      opacity: 0.9;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
     }
 
     /* HERO */
@@ -81,30 +115,6 @@
       text-decoration: none;
       font-weight: 600;
       border-radius: 4px;
-    }
-
-    /* NAV */
-    nav {
-      background: var(--blanc);
-      border-bottom: 1px solid var(--gris-suau);
-    }
-
-    .nav-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      padding: 12px 0;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: var(--text);
-      font-weight: 600;
-      font-size: 0.9rem;
-      text-transform: uppercase;
     }
 
     /* MAIN */
@@ -160,18 +170,18 @@
     .contacte-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 30px;
-      align-items: start;
+      gap: 40px;
+      align-items: center;
     }
 
-    .contacte-grid div {
+    .contacte-box {
       background: var(--crema);
-      padding: 20px;
+      padding: 25px;
       border-radius: 6px;
       border: 1px solid var(--gris-suau);
     }
 
-    .contacte-grid h3 {
+    .contacte-box h3 {
       margin-top: 0;
       font-size: 1.2rem;
       color: var(--blau-apagat);
@@ -186,6 +196,11 @@
 
     .dia {
       font-weight: 600;
+    }
+
+    .contacte-info p {
+      margin: 8px 0;
+      font-size: 1rem;
     }
 
     /* WHATSAPP BUTTON */
@@ -241,8 +256,21 @@
 
 <body>
 
-<!-- LOGO -->
-<img src="logo.png" class="logo" alt="Logo Centre Dental Pardinyes">
+<!-- NAV + LOGO -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-left">
+      <img src="logo.png" class="logo" alt="Logo Centre Dental Pardinyes">
+    </div>
+
+    <div class="nav-links">
+      <a href="#sobre">Sobre nosaltres</a>
+      <a href="#serveis">Serveis</a>
+      <a href="#ubicacio">Ubicació</a>
+      <a href="#contacte">Contacte</a>
+    </div>
+  </div>
+</nav>
 
 <!-- HERO -->
 <div class="hero">
@@ -252,16 +280,6 @@
     <a href="#contacte">Demana cita</a>
   </div>
 </div>
-
-<!-- NAV -->
-<nav>
-  <div class="nav-inner">
-    <a href="#sobre">Sobre nosaltres</a>
-    <a href="#serveis">Serveis</a>
-    <a href="#ubicacio">Ubicació</a>
-    <a href="#contacte">Contacte</a>
-  </div>
-</nav>
 
 <main>
 
@@ -313,7 +331,7 @@
     <div class="contacte-grid">
 
       <!-- Horari a l'esquerra -->
-      <div>
+      <div class="contacte-box">
         <h3>Horari</h3>
         <div class="horari-grid">
           <div class="dia">Dilluns</div><div>10:00–13:30 · 16:00–19:30</div>
@@ -326,8 +344,8 @@
         </div>
       </div>
 
-      <!-- Telèfons + correu a la dreta -->
-      <div>
+      <!-- Contacte a la dreta -->
+      <div class="contacte-box contacte-info">
         <h3>Contacte directe</h3>
         <p><strong>Fix:</strong> 973 22 56 54</p>
         <p><strong>Mòbil:</strong> +34 638 457 353</p>
