@@ -2,347 +2,426 @@
 <html lang="ca">
 <head>
   <meta charset="UTF-8">
-  <title>Centre Dental Pardinyes</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centre Dental Pardinyes · Lleida</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Tipografia moderna -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
-    /* Tipografia i estil base */
+    :root {
+      --blau-apagat: #3f5874;
+      --terra: #c9b08b;
+      --crema: #f5f1e8;
+      --text: #222;
+      --gris-suau: #e1ddd4;
+      --blanc: #fff;
+      --whatsapp: #25D366;
+    }
+
     body {
+      font-family: "Poppins", sans-serif;
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: #222;
-      background: #ffffff;
+      background: var(--crema);
+      color: var(--text);
+      line-height: 1.6;
     }
 
-    a {
-      color: #1b6fbf;
+    /* CONTENIDOR GLOBAL SIMÈTRIC */
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* NAV (sense logo) */
+    nav {
+      background: var(--blanc);
+      border-bottom: 1px solid var(--gris-suau);
+      padding: 10px 0;
+    }
+
+    .nav-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 20px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+    }
+
+    .nav-links a {
       text-decoration: none;
-    }
-
-    /* Navegació */
-    header {
-      padding: 16px 40px;
-      border-bottom: 1px solid #eee;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .nav-left {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .nav-logo {
+      color: var(--text);
       font-weight: 600;
-      font-size: 16px;
-      letter-spacing: 0.06em;
+      font-size: 0.9rem;
       text-transform: uppercase;
-      color: #1b6fbf;
     }
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 18px;
-      margin: 0;
-      padding: 0;
-      font-size: 14px;
-    }
-
-    nav li a {
-      padding-bottom: 2px;
-      border-bottom: 1px solid transparent;
-    }
-
-    nav li a:hover {
-      border-bottom-color: #1b6fbf;
-    }
-
-    /* Hero */
+    /* HERO */
     .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-      gap: 40px;
-      padding: 60px 40px 40px;
-      align-items: center;
-    }
-
-    .hero-text h1 {
-      font-size: 32px;
-      margin: 0 0 12px;
-    }
-
-    .hero-text p {
-      margin: 0 0 20px;
-      font-size: 15px;
-      color: #555;
-      max-width: 480px;
-    }
-
-    .hero-cta {
+      width: 100%;
+      height: 360px;
+      background: url('queixalets.jpeg') center/cover no-repeat;
       display: flex;
-      gap: 12px;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--blanc);
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .hero p {
       margin-top: 10px;
+      font-size: 1.1rem;
+      font-weight: 400;
     }
 
-    .btn-primary {
-      background: #1b6fbf;
-      color: #fff;
-      border-radius: 999px;
-      padding: 10px 20px;
-      font-size: 14px;
-      border: none;
-      cursor: pointer;
+    .hero a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 28px;
+      background: var(--terra);
+      color: var(--blanc);
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 4px;
     }
 
-    .btn-secondary {
-      background: transparent;
-      color: #1b6fbf;
-      border-radius: 999px;
-      padding: 10px 20px;
-      font-size: 14px;
-      border: 1px solid #1b6fbf;
-      cursor: pointer;
-    }
-
-    .hero-image {
-      text-align: right;
-    }
-
-    .hero-image img {
-      max-width: 260px;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-    }
-
-    /* Seccions */
+    /* SECCIONS */
     section {
-      padding: 40px 40px 20px;
-      border-top: 1px solid #f3f3f3;
+      background: var(--blanc);
+      padding: 35px;
+      margin: 40px auto;
+      border-radius: 6px;
+      border: 1px solid var(--gris-suau);
     }
 
     section h2 {
-      font-size: 22px;
+      margin-top: 0;
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--blau-apagat);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    /* SOBRE NOSALTRES */
+    .sobre {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .sobre img {
+      width: 100%;
+      border-radius: 6px;
+      opacity: 0.9;
+    }
+
+    /* SERVEIS — TARGETES CENTRADES I SIMÈTRIQUES */
+    .serveis-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .servei-card {
+      background: var(--crema);
+      padding: 25px;
+      width: 260px;
+      border-radius: 6px;
+      border: 1px solid var(--gris-suau);
+      transition: 0.25s ease;
+      text-align: center;
+    }
+
+    .servei-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    }
+
+    .servei-card h3 {
+      margin-top: 0;
+      font-size: 1.15rem;
+      color: var(--blau-apagat);
+      margin-bottom: 10px;
+    }
+
+    .servei-card p {
+      margin: 0;
+      font-size: 0.95rem;
+    }
+
+    .serveis-img {
+      margin-top: 30px;
+      width: 100%;
+      height: 260px;
+      background: url('sala_despera_1.jpeg') center/cover no-repeat;
+      border-radius: 6px;
+      opacity: 0.85;
+      border: 1px solid var(--gris-suau);
+    }
+
+    /* UBICACIÓ — CENTRAT I PROPORCIONAT */
+    .ubicacio-wrapper {
+      text-align: center;
+    }
+
+    .ubicacio-wrapper iframe {
+      width: 100%;
+      height: 350px;
+      border: none;
+      border-radius: 6px;
+    }
+
+    /* CONTACTE — SIMÈTRIC */
+    .contacte-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .contacte-box {
+      background: var(--crema);
+      padding: 25px;
+      border-radius: 6px;
+      border: 1px solid var(--gris-suau);
+    }
+
+    .contacte-box h3 {
+      margin-top: 0;
+      font-size: 1.2rem;
+      color: var(--blau-apagat);
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .horari-grid {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      row-gap: 8px;
+    }
+
+    .dia {
+      font-weight: 600;
+    }
+
+    .contacte-info p {
+      margin: 8px 0;
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    /* WHATSAPP BUTTON */
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 22px;
+      right: 22px;
+      background: var(--whatsapp);
+      color: var(--blanc);
+      padding: 14px 18px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.95rem;
+    }
+
+    /* FOOTER AMB LOGO INTEGRAT */
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--terra);
+      padding: 40px 10px 50px;
+    }
+
+    footer img {
+      width: 55px;
+      opacity: 0.7;
       margin-bottom: 12px;
     }
 
-    section p {
-      font-size: 14px;
-      color: #555;
-      max-width: 640px;
-    }
-
-    .grid-2 {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-      gap: 32px;
-    }
-
-    .card {
-      border-radius: 12px;
-      border: 1px solid #eee;
-      padding: 18px 20px;
-      background: #fafafa;
-    }
-
-    .card h3 {
-      margin-top: 0;
-      font-size: 16px;
-      margin-bottom: 8px;
-    }
-
-    .card p {
-      margin: 0;
-      font-size: 14px;
-      color: #555;
-    }
-
-    /* Bloc contacte */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-      gap: 32px;
-      align-items: flex-start;
-    }
-
-    .contact-hours p,
-    .contact-info p {
-      margin: 4px 0;
-      font-size: 14px;
-    }
-
-    .whatsapp-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-top: 10px;
-      padding: 8px 14px;
-      border-radius: 999px;
-      border: 1px solid #25D366;
-      color: #128C7E;
-      font-size: 13px;
-      background: #e9f9f1;
-    }
-
-    /* Footer amb logo integrat */
-    footer {
-      margin-top: 40px;
-      padding: 32px 40px 26px;
-      background: #f7f7f7;
-      border-top: 1px solid #e5e5e5;
-    }
-
-    .footer-inner {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .footer-logo {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .footer-logo img {
-      width: 130px; /* subtil */
-      opacity: 0.96;
-    }
-
-    .footer-logo-text {
-      font-size: 13px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #4a4a4a;
-    }
-
-    .footer-info {
-      text-align: center;
-      font-size: 12px;
-      color: #777;
-    }
-
-    .footer-info p {
-      margin: 2px 0;
-    }
-
-    @media (max-width: 800px) {
-      .hero {
-        grid-template-columns: minmax(0, 1fr);
-        text-align: left;
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .sobre {
+        grid-template-columns: 1fr;
       }
-      .hero-image {
-        text-align: left;
+      .contacte-grid {
+        grid-template-columns: 1fr;
       }
-      .grid-2,
-      .contact-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      header {
-        padding: 12px 20px;
-      }
-      section {
-        padding: 30px 20px 16px;
-      }
-      footer {
-        padding: 26px 20px 20px;
+      .serveis-img {
+        height: 200px;
       }
     }
   </style>
 </head>
+
 <body>
 
-  <!-- Capçalera -->
-  <header>
-    <div class="nav-left">
-      <div class="nav-logo">cdp</div>
-      <nav>
-        <ul>
-          <li><a href="#qui-som">Qui som</a></li>
-          <li><a href="#serveis">Serveis</a></li>
-          <li><a href="#contacte">Contacte</a></li>
-        </ul>
-      </nav>
+<!-- NAV (sense logo) -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-links">
+      <a href="#sobre">Sobre nosaltres</a>
+      <a href="#serveis">Serveis</a>
+      <a href="#ubicacio">Ubicació</a>
+      <a href="#contacte">Contacte</a>
     </div>
-  </header>
+  </div>
+</nav>
 
-  <!-- Hero -->
-  <main>
-    <section class="hero">
-      <div class="hero-text">
-        <h1>Centre Dental Pardinyes</h1>
-        <p>Odontologia moderna i propera al barri de Pardinyes, amb un equip que cuida de tu amb calma i criteri.</p>
-        <div class="hero-cta">
-          <button class="btn-primary">Demana cita</button>
-          <button class="btn-secondary">Parla per WhatsApp</button>
-        </div>
-      </div>
-      <div class="hero-image">
-        <!-- substitueix per la teva imatge hero real -->
-        <img src="img/queixalets.jpeg" alt="Centre Dental Pardinyes">
-      </div>
-    </section>
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-content">
+    <h1>CENTRE DENTAL PARDINYES</h1>
+    <p>La teva clínica de confiança a Lleida</p>
+    <a href="#contacte">Demana cita</a>
+  </div>
+</div>
 
-    <!-- Secció Qui som -->
-    <section id="qui-som">
-      <h2>Qui som</h2>
-      <p>Som un centre dental a Pardinyes amb una filosofia clara: tractes tranquils, explicacions clares i decisions compartides amb el pacient. Prioritzem la confiança, la transparència i un entorn serè.</p>
-    </section>
+<main class="container">
 
-    <!-- Secció Serveis -->
-    <section id="serveis">
-      <h2>Serveis</h2>
-      <div class="grid-2">
-        <div class="card">
-          <h3>Odontologia general</h3>
-          <p>Revisions, neteges, tractaments conservadors i seguiment personalitzat per mantenir una boca sana a llarg termini.</p>
-        </div>
-        <div class="card">
-          <h3>Estètica dental</h3>
-          <p>Tractaments estètics discrets i respectuosos amb l’estructura dental, pensats per harmonitzar el teu somriure.</p>
-        </div>
+  <!-- SOBRE NOSALTRES -->
+  <section id="sobre">
+    <h2>SOBRE NOSALTRES</h2>
+    <div class="sobre">
+      <div>
+        <p>
+          Som una clínica dental que aposta per la proximitat, la calma i el tracte personal.
+          Creiem en una odontologia clara, sense presses i centrada en les persones.
+        </p>
+        <p>
+          El nostre objectiu és senzill: que cada pacient se senti escoltat, ben atès i en confiança.
+        </p>
       </div>
-    </section>
-
-    <!-- Secció Contacte -->
-    <section id="contacte">
-      <h2>Contacte</h2>
-      <div class="contact-grid">
-        <div class="contact-hours">
-          <h3>Horari</h3>
-          <p>Dilluns a divendres: 9:00 – 13:00 · 15:30 – 20:00</p>
-          <p>Dissabtes: segons cita prèvia</p>
-        </div>
-        <div class="contact-info">
-          <h3>Com contactar</h3>
-          <p>Telèfon: 600 000 000</p>
-          <p>Correu: info@centredentalpardinyes.cat</p>
-          <a class="whatsapp-btn" href="#">
-            <span>WhatsApp directe</span>
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer amb logo integrat de manera subtil -->
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-logo">
-        <!-- aquí poses el teu logo definitiu -->
-        <img src="img/logo-cdp.png" alt="Centre Dental Pardinyes">
-        <div class="footer-logo-text">Centre Dental Pardinyes</div>
-      </div>
-      <div class="footer-info">
-        <p>© 2026 Centre Dental Pardinyes</p>
-        <p>Pardinyes · Lleida</p>
-        <p>Tel: 600 000 000 · WhatsApp</p>
-      </div>
+      <img src="cuadre_queixal_sencer.jpeg" alt="Quadre dent abstracta">
     </div>
-  </footer>
+  </section>
+
+  <!-- SERVEIS -->
+  <section id="serveis">
+    <h2>SERVEIS</h2>
+
+    <div class="serveis-grid">
+
+      <div class="servei-card">
+        <h3>Higiene dental</h3>
+        <p>Neteges i manteniment periodontal.</p>
+      </div>
+
+      <div class="servei-card">
+        <h3>Ortodòncia</h3>
+        <p>Brackets i ortodòncia invisible.</p>
+      </div>
+
+      <div class="servei-card">
+        <h3>Implants dentals</h3>
+        <p>Solucions fixes per recuperar peces dentals.</p>
+      </div>
+
+      <div class="servei-card">
+        <h3>Estètica dental</h3>
+        <p>Millora del somriure i tractaments estètics personalitzats.</p>
+      </div>
+
+      <div class="servei-card">
+        <h3>Pròtesis dentals</h3>
+        <p>Pròtesis removibles i fixes sobre dents o implants.</p>
+      </div>
+
+    </div>
+
+    <div class="serveis-img"></div>
+  </section>
+
+  <!-- UBICACIÓ -->
+  <section id="ubicacio">
+    <h2>UBICACIÓ</h2>
+
+    <div class="ubicacio-wrapper">
+      <p>Carrer del Corregidor Escofet, 18 · 25005 Lleida</p>
+
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.019702829969!2d0.622!3d41.617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zTExFSURB!5e0!3m2!1ca!2es!4v0000000000">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- CONTACTE -->
+  <section id="contacte">
+    <h2>CONTACTE</h2>
+
+    <div class="contacte-grid">
+
+      <div class="contacte-box">
+        <h3>Horari</h3>
+        <div class="horari-grid">
+          <div class="dia">Dilluns</div><div>10:00–13:30 · 16:00–19:30</div>
+          <div class="dia">Dimarts</div><div>10:00–13:30 · 16:00–19:30</div>
+          <div class="dia">Dimecres</div><div>10:00–13:30 · 16:00–19:30</div>
+          <div class="dia">Dijous</div><div>10:00–14:00</div>
+          <div class="dia">Divendres</div><div>10:00–14:00</div>
+          <div class="dia">Dissabte</div><div>Tancat</div>
+          <div class="dia">Diumenge</div><div>Tancat</div>
+        </div>
+      </div>
+
+      <div class="contacte-box contacte-info">
+        <h3>Contacte directe</h3>
+        <p><strong>Fix:</strong> 973 22 56 54</p>
+        <p><strong>Mòbil:</strong> +34 638 457 353</p>
+        <p><strong>Correu:</strong> dentalpardinyes@hotmail.com</p>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <img src="logo.png" alt="Logo Centre Dental Pardinyes">
+  &copy; <span id="any"></span> Centre Dental Pardinyes · Lleida
+</footer>
+
+<script>
+  document.getElementById('any').textContent = new Date().getFullYear();
+</script>
+
+<!-- WHATSAPP BUTTON -->
+<a class="whatsapp-btn" href="https://wa.me/34638457353" target="_blank">
+  💬 WhatsApp
+</a>
 
 </body>
 </html>
