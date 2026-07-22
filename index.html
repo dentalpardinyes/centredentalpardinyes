@@ -27,6 +27,13 @@
       line-height: 1.6;
     }
 
+    /* CONTENIDOR GLOBAL SIMÈTRIC */
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
     /* NAV + LOGO */
     nav {
       background: var(--blanc);
@@ -35,7 +42,7 @@
     }
 
     .nav-inner {
-      max-width: 1100px;
+      max-width: 1000px;
       margin: 0 auto;
       display: flex;
       align-items: center;
@@ -110,17 +117,11 @@
       border-radius: 4px;
     }
 
-    /* MAIN */
-    main {
-      max-width: 1100px;
-      margin: 40px auto 70px;
-      padding: 0 20px;
-    }
-
+    /* SECCIONS */
     section {
       background: var(--blanc);
       padding: 35px;
-      margin-bottom: 40px;
+      margin: 40px auto;
       border-radius: 6px;
       border: 1px solid var(--gris-suau);
     }
@@ -149,18 +150,19 @@
       opacity: 0.9;
     }
 
-    /* SERVEIS — NOVA DISTRIBUCIÓ CENTRADA */
+    /* SERVEIS — TARGETES CENTRADES */
     .serveis-grid {
-      max-width: 900px;
-      margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 25px;
+      justify-items: center;
     }
 
     .servei-card {
       background: var(--crema);
       padding: 25px;
+      width: 100%;
+      max-width: 260px;
       border-radius: 6px;
       border: 1px solid var(--gris-suau);
       transition: 0.25s ease;
@@ -196,8 +198,6 @@
 
     /* UBICACIÓ — CENTRAT I PROPORCIONAT */
     .ubicacio-wrapper {
-      max-width: 700px;
-      margin: 0 auto;
       text-align: center;
     }
 
@@ -208,14 +208,11 @@
       border-radius: 6px;
     }
 
-    /* CONTACTE — SIMÈTRIC I NET */
+    /* CONTACTE — SIMÈTRIC */
     .contacte-grid {
-      max-width: 900px;
-      margin: 0 auto;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 40px;
-      align-items: start;
     }
 
     .contacte-box {
@@ -277,15 +274,6 @@
 
     /* RESPONSIVE */
     @media (max-width: 768px) {
-      .hero {
-        height: 300px;
-      }
-      .hero h1 {
-        font-size: 1.9rem;
-      }
-      .hero p {
-        font-size: 1rem;
-      }
       .sobre {
         grid-template-columns: 1fr;
       }
@@ -294,7 +282,6 @@
       }
       .serveis-img {
         height: 200px;
-        opacity: 0.75;
       }
     }
   </style>
@@ -305,10 +292,7 @@
 <!-- NAV + LOGO -->
 <nav>
   <div class="nav-inner">
-    <div class="nav-left">
-      <img src="logo.png" class="logo" alt="Logo Centre Dental Pardinyes">
-    </div>
-
+    <img src="logo.png" class="logo" alt="Logo Centre Dental Pardinyes">
     <div class="nav-links">
       <a href="#sobre">Sobre nosaltres</a>
       <a href="#serveis">Serveis</a>
@@ -327,7 +311,7 @@
   </div>
 </div>
 
-<main>
+<main class="container">
 
   <!-- SOBRE NOSALTRES -->
   <section id="sobre">
