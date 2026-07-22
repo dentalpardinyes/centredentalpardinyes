@@ -34,7 +34,7 @@
       padding: 0 20px;
     }
 
-    /* NAV + LOGO */
+    /* NAV (sense logo) */
     nav {
       background: var(--blanc);
       border-bottom: 1px solid var(--gris-suau);
@@ -46,13 +46,8 @@
       margin: 0 auto;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
       padding: 0 20px;
-    }
-
-    .logo {
-      width: 55px;
-      opacity: 0.9;
     }
 
     .nav-links {
@@ -150,19 +145,18 @@
       opacity: 0.9;
     }
 
-    /* SERVEIS — TARGETES CENTRADES */
+    /* SERVEIS — TARGETES CENTRADES I SIMÈTRIQUES */
     .serveis-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 25px;
-      justify-items: center;
     }
 
     .servei-card {
       background: var(--crema);
       padding: 25px;
-      width: 100%;
-      max-width: 260px;
+      width: 260px;
       border-radius: 6px;
       border: 1px solid var(--gris-suau);
       transition: 0.25s ease;
@@ -264,12 +258,18 @@
       font-size: 0.95rem;
     }
 
-    /* FOOTER */
+    /* FOOTER AMB LOGO INTEGRAT */
     footer {
       text-align: center;
       font-size: 0.85rem;
       color: var(--terra);
-      padding: 30px 10px 40px;
+      padding: 40px 10px 50px;
+    }
+
+    footer img {
+      width: 55px;
+      opacity: 0.7;
+      margin-bottom: 12px;
     }
 
     /* RESPONSIVE */
@@ -289,10 +289,9 @@
 
 <body>
 
-<!-- NAV + LOGO -->
+<!-- NAV (sense logo) -->
 <nav>
   <div class="nav-inner">
-    <img src="logo.png" class="logo" alt="Logo Centre Dental Pardinyes">
     <div class="nav-links">
       <a href="#sobre">Sobre nosaltres</a>
       <a href="#serveis">Serveis</a>
@@ -411,6 +410,7 @@
 </main>
 
 <footer>
+  <img src="logo.png" alt="Logo Centre Dental Pardinyes">
   &copy; <span id="any"></span> Centre Dental Pardinyes · Lleida
 </footer>
 
