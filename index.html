@@ -43,15 +43,8 @@
       padding: 0 20px;
     }
 
-    .nav-left {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
     .logo {
       width: 55px;
-      height: auto;
       opacity: 0.9;
     }
 
@@ -139,6 +132,7 @@
       text-transform: uppercase;
       color: var(--blau-apagat);
       margin-bottom: 20px;
+      text-align: center;
     }
 
     /* SOBRE NOSALTRES */
@@ -155,12 +149,13 @@
       opacity: 0.9;
     }
 
-    /* SERVEIS — NOVA DISTRIBUCIÓ */
+    /* SERVEIS — NOVA DISTRIBUCIÓ CENTRADA */
     .serveis-grid {
+      max-width: 900px;
+      margin: 0 auto;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 25px;
-      margin-top: 25px;
     }
 
     .servei-card {
@@ -169,6 +164,7 @@
       border-radius: 6px;
       border: 1px solid var(--gris-suau);
       transition: 0.25s ease;
+      text-align: center;
     }
 
     .servei-card:hover {
@@ -198,12 +194,28 @@
       border: 1px solid var(--gris-suau);
     }
 
-    /* CONTACTE */
+    /* UBICACIÓ — CENTRAT I PROPORCIONAT */
+    .ubicacio-wrapper {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .ubicacio-wrapper iframe {
+      width: 100%;
+      height: 350px;
+      border: none;
+      border-radius: 6px;
+    }
+
+    /* CONTACTE — SIMÈTRIC I NET */
     .contacte-grid {
+      max-width: 900px;
+      margin: 0 auto;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 40px;
-      align-items: center;
+      align-items: start;
     }
 
     .contacte-box {
@@ -218,6 +230,7 @@
       font-size: 1.2rem;
       color: var(--blau-apagat);
       margin-bottom: 15px;
+      text-align: center;
     }
 
     .horari-grid {
@@ -233,6 +246,7 @@
     .contacte-info p {
       margin: 8px 0;
       font-size: 1rem;
+      text-align: center;
     }
 
     /* WHATSAPP BUTTON */
@@ -332,7 +346,7 @@
     </div>
   </section>
 
-  <!-- SERVEIS (NOVA VERSIÓ ELEGANT) -->
+  <!-- SERVEIS -->
   <section id="serveis">
     <h2>SERVEIS</h2>
 
@@ -371,11 +385,14 @@
   <!-- UBICACIÓ -->
   <section id="ubicacio">
     <h2>UBICACIÓ</h2>
-    <p>Carrer del Corregidor Escofet, 18 · 25005 Lleida</p>
 
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.019702829969!2d0.622!3d41.617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zTExFSURB!5e0!3m2!1sca!2es!4v0000000000">
-    </iframe>
+    <div class="ubicacio-wrapper">
+      <p>Carrer del Corregidor Escofet, 18 · 25005 Lleida</p>
+
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.019702829969!2d0.622!3d41.617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zTExFSURB!5e0!3m2!1ca!2es!4v0000000000">
+      </iframe>
+    </div>
   </section>
 
   <!-- CONTACTE -->
@@ -384,7 +401,6 @@
 
     <div class="contacte-grid">
 
-      <!-- Horari a l'esquerra -->
       <div class="contacte-box">
         <h3>Horari</h3>
         <div class="horari-grid">
@@ -398,7 +414,6 @@
         </div>
       </div>
 
-      <!-- Contacte a la dreta -->
       <div class="contacte-box contacte-info">
         <h3>Contacte directe</h3>
         <p><strong>Fix:</strong> 973 22 56 54</p>
