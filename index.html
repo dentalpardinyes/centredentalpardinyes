@@ -155,7 +155,39 @@
       opacity: 0.9;
     }
 
-    /* SERVEIS */
+    /* SERVEIS — NOVA DISTRIBUCIÓ */
+    .serveis-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
+      margin-top: 25px;
+    }
+
+    .servei-card {
+      background: var(--crema);
+      padding: 25px;
+      border-radius: 6px;
+      border: 1px solid var(--gris-suau);
+      transition: 0.25s ease;
+    }
+
+    .servei-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    }
+
+    .servei-card h3 {
+      margin-top: 0;
+      font-size: 1.15rem;
+      color: var(--blau-apagat);
+      margin-bottom: 10px;
+    }
+
+    .servei-card p {
+      margin: 0;
+      font-size: 0.95rem;
+    }
+
     .serveis-img {
       margin-top: 30px;
       width: 100%;
@@ -300,16 +332,38 @@
     </div>
   </section>
 
-  <!-- SERVEIS -->
+  <!-- SERVEIS (NOVA VERSIÓ ELEGANT) -->
   <section id="serveis">
     <h2>SERVEIS</h2>
 
-    <ul>
-      <li><strong>Higiene dental:</strong> neteges professionals i prevenció.</li>
-      <li><strong>Ortodòncia:</strong> brackets i ortodòncia invisible.</li>
-      <li><strong>Implants:</strong> solucions fixes per recuperar peces dentals.</li>
-      <li><strong>Estètica:</strong> blanquejament i carilles.</li>
-    </ul>
+    <div class="serveis-grid">
+
+      <div class="servei-card">
+        <h3>Higiene dental</h3>
+        <p>Neteges i manteniment periodontal.</p>
+      </div>
+
+      <div class="servei-card">
+        <h3>Ortodòncia</h3>
+        <p>Brackets i ortodòncia invisible.</p>
+      </div>
+
+      <div class="servei-card">
+        <h3>Implants dentals</h3>
+        <p>Solucions fixes per recuperar peces dentals.</p>
+      </div>
+
+      <div class="servei-card">
+        <h3>Estètica dental</h3>
+        <p>Millora del somriure i tractaments estètics personalitzats.</p>
+      </div>
+
+      <div class="servei-card">
+        <h3>Pròtesis dentals</h3>
+        <p>Pròtesis removibles i fixes sobre dents o implants.</p>
+      </div>
+
+    </div>
 
     <div class="serveis-img"></div>
   </section>
